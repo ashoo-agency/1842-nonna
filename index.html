@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0032)https://vxm.ashoo.kim/1842-varya -->
 <html lang="ru" class=" flexbox flexboxlegacy no-cssgridlegacy cssgrid" style="--app-height: 744px;">
 
 <head>
@@ -6559,24 +6558,68 @@
 									<button type="button"
 										class="b-btn b-btn--blue item-header__phone js-show-phone d-flex d-flex__aj_c"
 										data-id="1842"
-										onclick="ym(92567495,&#39;reachGoal&#39;,&#39;SHOWNUMBER&#39;, {URL: document.location.href});return true;">
+										onclick="">
 										<i class="icon-phone-white" aria-hidden="true"></i>
 										<span>Показать телефон</span>
 									</button>
 									<div class="item-contacts__messengers">
 										<button rel="nofollow noopener" data-id="1842"
 											class="b-btn b-btn--outline-blue js-show-tg item-contacts__item"
-											onclick="if(window.fbq)fbq(&#39;track&#39;, &#39;Contact&#39;);ym(92567495,&#39;reachGoal&#39;,&#39;STARTTELEGRAM&#39;, {URL: document.location.href});return true;">
+											onclick="">
 											<i aria-hidden="true" class="icon-telegram-blue"></i>
 											<span>Telegram</span>
 										</button>
 										<button data-id="1842" rel="nofollow noopener"
 											class="b-btn b-btn--outline-blue js-show-wa item-contacts__item"
-											onclick="if(window.fbq)fbq(&#39;track&#39;, &#39;Contact&#39;);ym(92567495,&#39;reachGoal&#39;,&#39;STARTWHATSAPP&#39;, {URL: document.location.href});return true;">
+											onclick="">
 											<i aria-hidden="true" class="icon-whatsapp-blue"></i>
 											<span>Whatsapp</span>
 										</button>
 									</div>
+									<!-- Модальное окно -->
+									<div class="modal" id="modal">
+										<div class="modal__content">
+											<button class="modal__close" id="modalClose">×</button>
+											<p id="modalText"></p>
+											<a id="modalLink" href="#" target="_blank" rel="noopener">Перейти в аккаунт</a>
+										</div>
+									</div>
+									<script>
+										const modal = document.getElementById('modal');
+										const modalText = document.getElementById('modalText');
+										const modalLink = document.getElementById('modalLink');
+										const modalClose = document.getElementById('modalClose');
+
+										const links = {
+											tg: {
+											text: 'Наш Telegram аккаунт',
+											url: 'https://t.me/username'
+											},
+											wa: {
+											text: 'Наш WhatsApp аккаунт',
+											url: 'https://wa.me/79999999999'
+											}
+										};
+
+										document.querySelectorAll('.js-open').forEach(btn => {
+											btn.addEventListener('click', () => {
+											const type = btn.dataset.type;
+											modalText.textContent = links[type].text;
+											modalLink.href = links[type].url;
+											modal.classList.add('active');
+											});
+										});
+
+										modalClose.addEventListener('click', () => {
+											modal.classList.remove('active');
+										});
+
+										modal.addEventListener('click', (e) => {
+											if (e.target === modal) {
+											modal.classList.remove('active');
+											}
+										});
+									</script>
 								</div>
 							</div>
 							<div class="item-header__sku">
@@ -6941,7 +6984,7 @@
 									Черный пояс по менуэту 🥋
 								</p>
 								<button class="item-content__more b-btn--small b-btn--blue "
-									onclick="ym(92567495,&#39;reachGoal&#39;,&#39;item-content__more&#39;);return true;">Подробнее</button>
+									onclick="">Подробнее</button>
 								<div class="item-content__text">
 									💝На звоночки не отвечаю, пишите пожалуйста в ватсап, мах или телеграмм ❤<br>Мой
 									номер телефона +7&nbsp;923&nbsp;108‑68‑04‬<br>Мой канал&nbsp;<a
@@ -7741,18 +7784,18 @@
 											<div class="list-item__buttons">
 												<button type="button"
 													class="b-btn b-btn--blue b-btn--small js-show-phone" data-id="10210"
-													onclick="ym(92567495,&#39;reachGoal&#39;,&#39;SHOWNUMBER&#39;);return true;">
+													onclick="">
 													<i class="icon-phone-white" aria-hidden="true"></i>
 													<span>Показать телефон</span>
 												</button>
 												<button data-id="10210"
 													class="b-btn b-btn--blue b-btn--center b-btn--small js-show-tg"
-													onclick="if(window.fbq)fbq(&#39;track&#39;, &#39;Contact&#39;);ym(92567495,&#39;reachGoal&#39;,&#39;STARTTELEGRAM&#39;, {URL: document.location.href});return true;">
+													onclick="">
 													<i class="icon-telegram-white" aria-hidden="true"></i>
 												</button>
 												<button data-id="10210" rel="nofollow noopener"
 													class="b-btn b-btn--blue b-btn--center b-btn--small js-show-wa"
-													onclick="if(window.fbq)fbq(&#39;track&#39;, &#39;Contact&#39;);ym(92567495,&#39;reachGoal&#39;,&#39;STARTWHATSAPP&#39;, {URL: document.location.href});return true;">
+													onclick="">
 													<i class="icon-whatsapp-white" aria-hidden="true"></i>
 												</button>
 											</div>
@@ -7983,18 +8026,18 @@
 											<div class="list-item__buttons">
 												<button type="button"
 													class="b-btn b-btn--blue b-btn--small js-show-phone" data-id="22160"
-													onclick="ym(92567495,&#39;reachGoal&#39;,&#39;SHOWNUMBER&#39;);return true;">
+													onclick="">
 													<i class="icon-phone-white" aria-hidden="true"></i>
 													<span>Показать телефон</span>
 												</button>
 												<button data-id="22160"
 													class="b-btn b-btn--blue b-btn--center b-btn--small js-show-tg"
-													onclick="if(window.fbq)fbq(&#39;track&#39;, &#39;Contact&#39;);ym(92567495,&#39;reachGoal&#39;,&#39;STARTTELEGRAM&#39;, {URL: document.location.href});return true;">
+													onclick="">
 													<i class="icon-telegram-white" aria-hidden="true"></i>
 												</button>
 												<button data-id="22160" rel="nofollow noopener"
 													class="b-btn b-btn--blue b-btn--center b-btn--small js-show-wa"
-													onclick="if(window.fbq)fbq(&#39;track&#39;, &#39;Contact&#39;);ym(92567495,&#39;reachGoal&#39;,&#39;STARTWHATSAPP&#39;, {URL: document.location.href});return true;">
+													onclick="">
 													<i class="icon-whatsapp-white" aria-hidden="true"></i>
 												</button>
 											</div>
@@ -8238,18 +8281,18 @@
 											<div class="list-item__buttons">
 												<button type="button"
 													class="b-btn b-btn--blue b-btn--small js-show-phone" data-id="36277"
-													onclick="ym(92567495,&#39;reachGoal&#39;,&#39;SHOWNUMBER&#39;);return true;">
+													onclick="">
 													<i class="icon-phone-white" aria-hidden="true"></i>
 													<span>Показать телефон</span>
 												</button>
 												<button data-id="36277"
 													class="b-btn b-btn--blue b-btn--center b-btn--small js-show-tg"
-													onclick="if(window.fbq)fbq(&#39;track&#39;, &#39;Contact&#39;);ym(92567495,&#39;reachGoal&#39;,&#39;STARTTELEGRAM&#39;, {URL: document.location.href});return true;">
+													onclick="">
 													<i class="icon-telegram-white" aria-hidden="true"></i>
 												</button>
 												<button data-id="36277" rel="nofollow noopener"
 													class="b-btn b-btn--blue b-btn--center b-btn--small js-show-wa"
-													onclick="if(window.fbq)fbq(&#39;track&#39;, &#39;Contact&#39;);ym(92567495,&#39;reachGoal&#39;,&#39;STARTWHATSAPP&#39;, {URL: document.location.href});return true;">
+													onclick="">
 													<i class="icon-whatsapp-white" aria-hidden="true"></i>
 												</button>
 											</div>
@@ -8443,18 +8486,18 @@
 											<div class="list-item__buttons">
 												<button type="button"
 													class="b-btn b-btn--blue b-btn--small js-show-phone" data-id="47828"
-													onclick="ym(92567495,&#39;reachGoal&#39;,&#39;SHOWNUMBER&#39;);return true;">
+													onclick="">
 													<i class="icon-phone-white" aria-hidden="true"></i>
 													<span>Показать телефон</span>
 												</button>
 												<button data-id="47828"
 													class="b-btn b-btn--blue b-btn--center b-btn--small js-show-tg"
-													onclick="if(window.fbq)fbq(&#39;track&#39;, &#39;Contact&#39;);ym(92567495,&#39;reachGoal&#39;,&#39;STARTTELEGRAM&#39;, {URL: document.location.href});return true;">
+													onclick="">
 													<i class="icon-telegram-white" aria-hidden="true"></i>
 												</button>
 												<button data-id="47828" rel="nofollow noopener"
 													class="b-btn b-btn--blue b-btn--center b-btn--small js-show-wa"
-													onclick="if(window.fbq)fbq(&#39;track&#39;, &#39;Contact&#39;);ym(92567495,&#39;reachGoal&#39;,&#39;STARTWHATSAPP&#39;, {URL: document.location.href});return true;">
+													onclick="">
 													<i class="icon-whatsapp-white" aria-hidden="true"></i>
 												</button>
 											</div>
