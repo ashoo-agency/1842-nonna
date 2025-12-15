@@ -6653,8 +6653,8 @@
 																		</svg>
 																	</span>
 																	<span class="modal_prepay_text">
-																		Данной девушке можно переводить предоплату в размере до <strong>7000</strong> рублей,
-																		банковские реквизиты <strong>верифицированы</strong> и заканчиваются на ***4342
+																		Данной девушке можно переводить предоплату в размере до <strong>18000</strong> рублей,
+																		банковские реквизиты <strong>верифицированы</strong>
 																	</span> </p>
 															</div>
 
@@ -6668,7 +6668,30 @@
 											</div>
 										</div>
 									</div>
+									<script>
+										document.addEventListener('click', (e) => {
+										const btn = e.target.closest('.js-show-phone');
+										if (!btn) return;
 
+										const phoneRaw = btn.dataset.phone; // +79231086823
+										const phoneFormatted = '+7 923 108-68-23';
+
+										const link = document.createElement('a');
+										link.href = `tel:${phoneRaw}`;
+										link.className = btn.className.replace('js-show-phone', '');
+										link.onclick = () => {
+											ym(92567495, 'reachGoal', 'CLICKNUMBERPERSON');
+											return true;
+										};
+
+										link.innerHTML = `
+											<i class="icon-phone-white" aria-hidden="true"></i>
+											<span>${phoneFormatted}</span>
+										`;
+
+										btn.replaceWith(link);
+										});
+									</script>
 									<script>
 										const prepayModal = document.getElementById('prepay-modal-wrapper');
 										// открыть
@@ -7136,7 +7159,7 @@
 								</p>
 								<div class="item-content__text is-active">
 									💝На звоночки не отвечаю, пишите пожалуйста в ватсап, мах или телеграмм ❤<br>Мой
-									номер телефона +7&nbsp;923&nbsp;108‑68‑04‬<br>Мой канал&nbsp;<a
+									номер телефона +7&nbsp;923&nbsp;108‑68‑23‬<br>Мой канал&nbsp;<a
 										href="https://t.me/nonnachk"
 										target="_blank">https://t.me/nonnachk</a><br>Обязательно подписывайся, чтобы
 									не потерять меня из виду💎<br><br>Здравствуй мой дорогой читатель💟 Позволь
@@ -7500,7 +7523,7 @@
 													</div>
 													<div class="item-time__list">
 														<span>У тебя*</span>
-														<strong>-</strong>
+														<strong>—</strong>
 													</div>
 												</div>
 											</div>
@@ -7522,7 +7545,7 @@
 													</div>
 													<div class="item-time__list">
 														<span>У тебя*</span>
-														<strong>-</strong>
+														<strong>—</strong>
 													</div>
 												</div>
 											</div>
@@ -7551,7 +7574,7 @@
 													</div>
 													<div class="item-time__list">
 														<span>У тебя*</span>
-														<strong>-</strong>
+														<strong>—</strong>
 													</div>
 												</div>
 											</div>
@@ -7573,7 +7596,7 @@
 													</div>
 													<div class="item-time__list">
 														<span>У тебя*</span>
-														<strong>-</strong>
+														<strong>—</strong>
 													</div>
 												</div>
 											</div>
@@ -7587,7 +7610,7 @@
 											<path d="M19.2 10.4001H16V12.8001H19.2V10.4001Z" fill="#426ed1"></path>
 										</svg>
 										<div class="profile-edit-alert__name">
-											Платежные реквизиты проверены. Если просит аванс, то отправляйте на карту, которая заканчивается на **** <strong>3932</strong>
+											Платежные реквизиты проверены. Можете переводить по номеру предоставленному моделью <strong></strong>
 										</div>
 									</div>
 									<!-- <div class="item-time__footer">
@@ -7600,7 +7623,7 @@
 							</div>
 							<div class="item-find-more" data-nosnippet="">
 								<span>Aнкет на этом номере: 1 </span>
-								<a href="https://vxm.ashoo.kim/search?q=phone-6804"
+								<a href="https://vxm.ashoo.kim/search?q=phone-6823"
 									class="b-btn b-btn--outline-red b-btn--small" rel="noopener nofollow">
 									Посмотреть →
 								</a>
