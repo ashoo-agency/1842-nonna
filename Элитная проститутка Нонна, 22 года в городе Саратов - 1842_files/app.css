@@ -22,6 +22,45 @@
     font-display: swap
 }
 
+.messenger-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+.messenger-modal.active {
+  display: block;
+}
+
+.mfp-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.mfp-wrap {
+  position: fixed;
+  inset: 0;
+  overflow-y: auto;
+}
+
+.mfp-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.mfp-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%

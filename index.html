@@ -6565,61 +6565,94 @@
 									<div class="item-contacts__messengers">
 										<button rel="nofollow noopener" data-id="1842"
 											class="b-btn b-btn--outline-blue js-show-tg item-contacts__item"
-											onclick="">
+											onclick=""
+											data-type="tg">
 											<i aria-hidden="true" class="icon-telegram-blue"></i>
 											<span>Telegram</span>
 										</button>
-										<button data-id="1842" rel="nofollow noopener"
-											class="b-btn b-btn--outline-blue js-show-wa item-contacts__item"
-											onclick="">
-											<i aria-hidden="true" class="icon-whatsapp-blue"></i>
-											<span>Whatsapp</span>
-										</button>
 									</div>
-									<!-- Модальное окно -->
-									<div class="modal" id="modal">
-										<div class="modal__content">
-											<button class="modal__close" id="modalClose">×</button>
-											<p id="modalText"></p>
-											<a id="modalLink" href="#" target="_blank" rel="noopener">Перейти в аккаунт</a>
+									
+									<!-- Алерт для тг контакта -->
+									<div id="messengers-dialog" class="messenger-modal">
+										<div class="mfp-bg modal-animation"></div>
+
+										<div class="mfp-wrap mfp-align-top mfp-auto-cursor modal-animation">
+											<div class="mfp-container mfp-inline-holder">
+											<div class="mfp-content">
+
+												<button type="button" class="mfp-close js-close-modal">
+												<i class="icon-close-blue" aria-hidden="true"></i>
+												</button>
+
+												<div class="metro-box offcavas-metro-box messenger-dialog-box"
+													style="color:black; padding: 20px">
+
+												<div style="display:flex;flex-direction:column;gap:16px;align-items:center">
+													<div id="modal-title"
+														style="text-align:center;color:#426ED1;font-size:21px;font-weight:700">
+													Чтобы начать диалог<br>нажмите кнопку
+													</div>
+
+													<div style="width:106px;height:106px;text-align:center">
+													<img id="modal-icon" src="" alt="">
+													</div>
+												</div>
+
+												<a id="messenger-link" href="#" target="_blank"
+													style="display:block;text-align:center;padding-top:20px">
+													<div style="padding:11px 24px;background:#426ED1;border-radius:10px">
+													<div id="modal-button-text"
+														style="color:white;font-size:14px">
+														Перейти
+													</div>
+													</div>
+												</a>
+
+												</div>
+											</div>
+											</div>
 										</div>
 									</div>
-									<script>
-										const modal = document.getElementById('modal');
-										const modalText = document.getElementById('modalText');
-										const modalLink = document.getElementById('modalLink');
-										const modalClose = document.getElementById('modalClose');
 
-										const links = {
+
+									<script>
+										const modal = document.getElementById('messengers-dialog');
+										const link = document.getElementById('messenger-link');
+										const icon = document.getElementById('modal-icon');
+										const btnText = document.getElementById('modal-button-text');
+										const closeBtn = document.querySelector('.js-close-modal');
+
+										const messengers = {
 											tg: {
-											text: 'Наш Telegram аккаунт',
-											url: 'https://t.me/username'
+											url: 'https://t.me/nonnachk',
+											text: 'Перейти в Telegram',
+											icon: '/themes/molvo/assets/images/telegram.svg'
 											},
-											wa: {
-											text: 'Наш WhatsApp аккаунт',
-											url: 'https://wa.me/79999999999'
-											}
 										};
 
-										document.querySelectorAll('.js-open').forEach(btn => {
+										document.querySelectorAll('.js-show-messenger').forEach(btn => {
 											btn.addEventListener('click', () => {
 											const type = btn.dataset.type;
-											modalText.textContent = links[type].text;
-											modalLink.href = links[type].url;
+											const data = messengers[type];
+
+											link.href = data.url;
+											btnText.textContent = data.text;
+											icon.src = data.icon;
+											icon.alt = type;
+
 											modal.classList.add('active');
 											});
 										});
 
-										modalClose.addEventListener('click', () => {
+										closeBtn.addEventListener('click', () => {
 											modal.classList.remove('active');
 										});
 
-										modal.addEventListener('click', (e) => {
-											if (e.target === modal) {
+										modal.querySelector('.mfp-bg').addEventListener('click', () => {
 											modal.classList.remove('active');
-											}
 										});
 									</script>
+
 								</div>
 							</div>
 							<div class="item-header__sku">
@@ -6983,9 +7016,7 @@
 								<p>
 									Черный пояс по менуэту 🥋
 								</p>
-								<button class="item-content__more b-btn--small b-btn--blue "
-									onclick="">Подробнее</button>
-								<div class="item-content__text">
+								<div class="item-content__text is-active">
 									💝На звоночки не отвечаю, пишите пожалуйста в ватсап, мах или телеграмм ❤<br>Мой
 									номер телефона +7&nbsp;923&nbsp;108‑68‑04‬<br>Мой канал&nbsp;<a
 										href="https://t.me/nonnachk"
